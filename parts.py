@@ -46,44 +46,51 @@ if st.session_state.page == "home":
 
         with columns[1]:
             st.image(fittings_URL, caption="Fittings")
-            st.form_submit_button("View more", on_click = go_fittings)
-            st.subheader("Truck Fittings")
             
-            st.number_input("How much?", min_value=0, max_value=100, step=1, key="fittings")
+            st.subheader("Truck Fittings")
+            st.form_submit_button("View more", on_click = go_fittings)
+            
+            
             
 
         with columns[2]:
             st.image(oil_filter_url, caption="Oil filter")
             st.subheader("Oil filter  $75")
+            st.form_submit_button("View?")
             
-            st.number_input("How much?", min_value=0, max_value=100, step=1, key="oil_filter")
+            
 
         with columns[3]:
             st.image(batteries_url, caption="Batteries")
             st.subheader("Batteries       $10")
+            st.form_submit_button("View?")
             
-            st.number_input("How much?", min_value=0, max_value=100, step=1, key="batteries")
+            
 
         col2 = st.columns(4)
         with col2[0]:
             st.image(engine_parts_url, caption="Engine parts")
             st.subheader("Engine parts  $50")
+            st.form_submit_button("View?")
             
-            st.number_input("How much?", min_value=0, max_value=100, step=1, key="engine_parts")
+            
         with col2[1]:
             st.image(oil_url, caption="Oil")
             st.subheader("Truck Oil  $5")
+            st.form_submit_button("View?")
             
-            st.number_input("How much?", min_value=0, max_value=100, step=1, key="oil")
+            
         with col2[2]:
             st.image(exhaust_system_url, caption="Exhaust system")
             st.subheader("Exhaust System $10")
+            st.form_submit_button("View?")
             
-            st.number_input("How much?", min_value=0, max_value=100, step=1, key="exhaust system")
+            
         with col2[3]:
             st.image(ligthing_url, caption="Lightings")
             st.subheader("Lightings   $10")
-            st.number_input("How much?", min_value=0, max_value=100, step=1, key="lighting")
+            st.form_submit_button("View?")
+            
             
 
         submitted = st.form_submit_button("Submit!")
