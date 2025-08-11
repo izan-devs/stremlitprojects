@@ -13,6 +13,7 @@ def go_home():
 
 def go_contact():
     st.session_state.page = "contact"
+hydraulic = "https://m.media-amazon.com/images/I/617QrwH+G+L.jpg"
 hardware = "https://m.media-amazon.com/images/I/81Npb2nUV7L._UF1000,1000_QL80_.jpg"
 image = "https://www.udtrucks.com/sites/default/files/styles/hero_desktop_crop/public/2024-01/Full_lineup_2024_Website%20Hero_0.jpg?itok=PgCxZ6EX"    
 workshop_coupling_fittings = "https://jacosuperiorproducts.com/cdn/shop/products/Main.png?v=1611431622"    
@@ -131,7 +132,7 @@ elif st.session_state.page == "fittings":
         st.subheader("$1/Piece")
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings4")
         
-    col2 = st.columns(2)
+    col2 = st.columns(3)
     with col2[0]:
         st.image(workshop_coupling_fittings,width=150)
         st.write("Workshop  Coupling  Fittings")
@@ -139,6 +140,8 @@ elif st.session_state.page == "fittings":
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings5")
     with col2[1]:
         st.image(hardware,width=150)
+    with col2[2]:
+        st.image(hydraulic.width150)
         
 
         
@@ -166,6 +169,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
