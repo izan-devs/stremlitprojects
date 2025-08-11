@@ -139,7 +139,7 @@ elif st.session_state.page == "fittings":
         st.subheader("$1/Piece")
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings5")
     with col2[1]:
-        st.image(hardware,width=150)
+        st.image(hardware,width=200)
         st.write("Hardware Fittings")
         st.subheader("$1/Piece")
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings6")
@@ -176,6 +176,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
