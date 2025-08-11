@@ -141,7 +141,7 @@ elif st.session_state.page == "fittings":
     with col2[1]:
         st.image(hardware,width=150)
     with col2[2]:
-        st.image(hydraulic.width=150)
+        st.image(hydraulic,width=150)
         
 
         
@@ -169,6 +169,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
