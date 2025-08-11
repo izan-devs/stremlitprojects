@@ -40,7 +40,7 @@ if st.session_state.page == "home":
         columns = st.columns(4)
         with columns[0]:
             st.image(suspension_url, caption="Suspension")
-            st.subheader("Suspension  $15")
+            st.subheader("Suspension")
             
             st.number_input("How much?", min_value=0, max_value=100, step=1, key="suspension")
 
@@ -55,14 +55,15 @@ if st.session_state.page == "home":
 
         with columns[2]:
             st.image(oil_filter_url, caption="Oil filter")
-            st.subheader("Oil filter  $75")
+            st.subheader("Oil filter")
+            st.form_submit_button("View more?")
             
             
             
 
         with columns[3]:
             st.image(batteries_url, caption="Batteries")
-            st.subheader("Batteries       $10")
+            st.subheader("Batteries")
             
             
             
@@ -70,25 +71,25 @@ if st.session_state.page == "home":
         col2 = st.columns(4)
         with col2[0]:
             st.image(engine_parts_url, caption="Engine parts")
-            st.subheader("Engine parts  $50")
+            st.subheader("Engine parts")
             
             
             
         with col2[1]:
             st.image(oil_url, caption="Oil")
-            st.subheader("Truck Oil  $5")
+            st.subheader("Truck Oil")
             
             
             
         with col2[2]:
             st.image(exhaust_system_url, caption="Exhaust system")
-            st.subheader("Exhaust System $10")
+            st.subheader("Exhaust System")
             
             
             
         with col2[3]:
             st.image(ligthing_url, caption="Lightings")
-            st.subheader("Lightings   $10")
+            st.subheader("Lightings")
             
             
             
@@ -159,6 +160,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
