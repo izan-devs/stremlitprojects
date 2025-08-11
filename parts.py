@@ -64,6 +64,7 @@ if st.session_state.page == "home":
         with columns[3]:
             st.image(batteries_url, caption="Batteries")
             st.subheader("Batteries")
+            st.form_submit_button("View")
             
             
             
@@ -160,6 +161,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
