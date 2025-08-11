@@ -42,7 +42,7 @@ if st.session_state.page == "home":
             st.image(suspension_url, caption="Suspension")
             st.subheader("Suspension")
             
-            st.number_input("How much?", min_value=0, max_value=100, step=1, key="suspension")
+            
 
         with columns[1]:
             st.image(fittings_URL, caption="Fittings")
@@ -163,6 +163,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
