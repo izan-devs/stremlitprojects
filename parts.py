@@ -80,6 +80,9 @@ if st.session_state.page == "home":
         st.subheader("Engine parts")
         st.image(engine_parts_url, caption="Engine parts")
         st.button("View more?",key="four")
+        submitted = st.button("Submit!")
+        if submitted:
+            go_contact()
             
             
             
@@ -111,9 +114,7 @@ if st.session_state.page == "home":
             
             
 
-        submitted = st.button("Submit!")
-        if submitted:
-            go_contact()
+        
           
 elif st.session_state.page == "fittings":
     st.title("Fittings")
@@ -188,6 +189,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
