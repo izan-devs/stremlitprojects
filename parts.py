@@ -98,7 +98,7 @@ if st.session_state.page == "home":
             
             
             
-    with col2[1]:
+    with columns[1]:
         st.subheader("Truck Oil")
         st.image(oil_url, caption="Oil")
         st.button("View more?",key="five")
@@ -107,7 +107,7 @@ if st.session_state.page == "home":
             
             
             
-    with col2[2]:
+    with columns[2]:
         st.subheader("Exhaust System")
         st.image(exhaust_system_url, caption="Exhaust system")
         st.button("View more?")
@@ -115,7 +115,7 @@ if st.session_state.page == "home":
             
             
             
-    with col2[3]:
+    with columns[3]:
         st.subheader("Lightings")
         st.image(ligthing_url, caption="Lightings")
         st.button("View more?",key="seven")
@@ -227,6 +227,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
