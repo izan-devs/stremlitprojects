@@ -142,6 +142,8 @@ elif st.session_state.page == "filter":
     with col3[3]:
         st.image(transmission)
         st.write("Transmission Filter")
+        st.subheader("$5")
+        st.number_input("How much",min_value=0,max_value=100,step=1,key="filter4")
         
 elif st.session_state.page == "fittings":
     st.title("Fittings")
@@ -216,6 +218,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
