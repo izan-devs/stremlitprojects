@@ -105,7 +105,7 @@ if st.session_state.page == "home":
     with col2[3]:
         st.subheader("Lightings")
         st.image(ligthing_url, caption="Lightings")
-        st.button("View more?")
+        st.button("View more?",key="seven")
             
             
             
@@ -188,6 +188,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
