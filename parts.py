@@ -155,6 +155,7 @@ elif st.session_state.page == "filter":
         st.number_input("How much",min_value=0,max_value=100,step=1,key="filter5")
         
 elif st.session_state.page == "fittings":
+    st.write("#")
     st.title("Fittings")
     
     
@@ -198,7 +199,7 @@ elif st.session_state.page == "fittings":
         st.write("Hydraulic Coupling Fittings")
         st.subheader("$1")
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings7")
-    st.rerun()
+
         
         
 
@@ -227,6 +228,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
