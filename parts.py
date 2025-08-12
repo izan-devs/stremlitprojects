@@ -49,9 +49,7 @@ if st.session_state.page == "home":
     with columns[0]:
         st.subheader("Suspension")
         st.image(suspension_url, caption="Suspension")
-        st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
-        st.button("View more?", key="one")
-        st.markdown("</div>", unsafe_allow_html=True)
+        st.button("View more?")
             
             
             
