@@ -41,31 +41,32 @@ if st.session_state.page == "home":
     with st.form("order_form"):
         columns = st.columns(4)
         with columns[0]:
-            st.image(suspension_url, caption="Suspension")
             st.subheader("Suspension")
+            st.image(suspension_url, caption="Suspension")
+            
             
             
 
         with columns[1]:
-            st.image(fittings_URL, caption="Fittings")
-            
             st.subheader("Truck Fittings")
+            st.image(fittings_URL, caption="Fittings")
             st.form_submit_button("View more", on_click = go_fittings)
             
             
             
 
         with columns[2]:
-            st.image(oil_filter_url, caption="Oil filter")
             st.subheader("Oil filter")
+            st.image(oil_filter_url, caption="Oil filter")
             st.form_submit_button("View more?")
             
             
             
 
         with columns[3]:
-            st.image(batteries_url, caption="Batteries")
             st.subheader("Batteries")
+            st.image(batteries_url, caption="Batteries")
+            
             
             
             
@@ -74,28 +75,32 @@ if st.session_state.page == "home":
 
         col2 = st.columns(4)
         with col2[0]:
-            st.image(engine_parts_url, caption="Engine parts")
             st.subheader("Engine parts")
+            st.image(engine_parts_url, caption="Engine parts")
+            
             
             
             
             
         with col2[1]:
-            st.image(oil_url, caption="Oil")
             st.subheader("Truck Oil")
+            st.image(oil_url, caption="Oil")
+            
             
             
             
             
         with col2[2]:
-            st.image(exhaust_system_url, caption="Exhaust system")
             st.subheader("Exhaust System")
+            st.image(exhaust_system_url, caption="Exhaust system")
+            
             
             
             
         with col2[3]:
-            st.image(ligthing_url, caption="Lightings")
             st.subheader("Lightings")
+            st.image(ligthing_url, caption="Lightings")
+            
             
             
             
@@ -177,6 +182,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
