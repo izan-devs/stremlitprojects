@@ -121,7 +121,7 @@ if st.session_state.page == "home":
 elif st.session_state.page == "filter":
     st.title("FILTERS")
     col3 = st.columns(5)
-    with columns [0]:
+    with col3 [0]:
         st.image(air)
         st.write("Air Filter")
         st.subheader("$5")
@@ -200,6 +200,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
