@@ -15,6 +15,7 @@ def go_home():
 
 def go_contact():
     st.session_state.page = "contact"
+water = "https://m.media-amazon.com/images/I/51NWojSF3tL.jpg"
 feul = "https://cdn11.bigcommerce.com/s-26lddf/images/stencil/1280x1280/products/4673/19637/P551337__81487.1735036382.jpg?c=2"
 air = "https://5.imimg.com/data5/AN/PC/MY-2352124/truck-air-filter-500x500.jpg"
 hydraulic = "https://m.media-amazon.com/images/I/617QrwH+G+L.jpg"
@@ -132,6 +133,11 @@ elif st.session_state.page == "filter":
         st.write("Feul Filter")
         st.subheader("$5")
         st.number_input("How much",min_value=0,max_value=100,step=1,key="filter2")
+    with col3[2]:
+        st.image(water)
+        st.write("Water Filters")
+        st.subheader("$5")
+        st.number_input("How much",min_value=0,max_value=100,step=1,key="filter3")
         
 elif st.session_state.page == "fittings":
     st.title("Fittings")
@@ -206,6 +212,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
