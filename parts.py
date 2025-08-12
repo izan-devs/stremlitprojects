@@ -158,7 +158,7 @@ elif st.session_state.page == "fittings":
     st.title("Fittings")
     
     
-    
+    columns = st.columns(4)
     with columns[0]:
         st.image(air_condition_fittings)
         st.write("Air Conditioning Fittings")
@@ -226,6 +226,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
