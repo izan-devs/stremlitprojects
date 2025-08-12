@@ -45,7 +45,7 @@ if st.session_state.page == "home":
     st.image(image)
     
 
-    #columns = st.columns(4)
+    columns = st.columns(4)
     with columns[0]:
         st.subheader("Suspension")
         st.image(suspension_url, caption="Suspension")
@@ -227,6 +227,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
