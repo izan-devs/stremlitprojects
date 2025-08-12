@@ -148,22 +148,7 @@ elif st.session_state.page == "fittings":
         st.subheader("$1")
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings4")
         
-    col2 = st.columns(3)
-    with col2[0]:
-        st.image(workshop_coupling_fittings,width=150)
-        st.write("Workshop  Coupling  Fittings")
-        st.subheader("$1")
-        st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings5")
-    with col2[1]:
-        st.image(hardware,width=220)
-        st.write("Hardware Fittings")
-        st.subheader("$1")
-        st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings6")
-    with col2[2]:
-        st.image(hydraulic,width=150)
-        st.write("Hydraulic Coupling Fittings")
-        st.subheader("$1")
-        st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings7")
+    
         
         
 
@@ -192,6 +177,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
