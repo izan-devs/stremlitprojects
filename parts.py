@@ -1,4 +1,4 @@
-="import streamlit as st
+import streamlit as st
 
 st.set_page_config(layout='wide')
 if "page" not in st.session_state:
@@ -183,6 +183,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
