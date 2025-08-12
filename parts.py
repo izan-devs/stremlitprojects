@@ -50,8 +50,7 @@ if st.session_state.page == "home":
         st.subheader("Suspension")
         st.image(suspension_url, caption="Suspension")
         bcol = st.columns([1,3,1])
-        with bcol[1]:
-            
+        with bcol[3]:
             st.button("View more?",key="one")
             
             
@@ -61,7 +60,8 @@ if st.session_state.page == "home":
     with columns[1]:
         st.subheader("Truck Fittings")
         st.image(fittings_URL, caption="Fittings")
-        st.button("View more", on_click = go_fittings)
+        with bcol[1]:
+            st.button("View more", on_click = go_fittings)
             
             
             
@@ -228,6 +228,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
