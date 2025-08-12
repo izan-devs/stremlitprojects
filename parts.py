@@ -15,7 +15,7 @@ def go_home():
 
 def go_contact():
     st.session_state.page = "contact"
-feul = "https://m.media-amazon.com/images/I/61rvmX07qdL._UF1000,1000_QL80_.jpg"
+feul = "https://cdn11.bigcommerce.com/s-26lddf/images/stencil/1280x1280/products/4673/19637/P551337__81487.1735036382.jpg?c=2"
 air = "https://5.imimg.com/data5/AN/PC/MY-2352124/truck-air-filter-500x500.jpg"
 hydraulic = "https://m.media-amazon.com/images/I/617QrwH+G+L.jpg"
 hardware = "https://m.media-amazon.com/images/I/81Npb2nUV7L._UF1000,1000_QL80_.jpg"
@@ -206,6 +206,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
