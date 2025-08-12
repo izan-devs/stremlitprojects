@@ -3,7 +3,9 @@ import streamlit as st
 st.set_page_config(layout='wide')
 if "page" not in st.session_state:
     st.session_state.page = "home"
-tabs = st.tabs(["Home"])    
+tabs = st.tabs(["Home"]) 
+def go_filter():
+    st.session_state.page = "filter"
 def go_fittings():
     st.session_state.page = "fittings"
 
@@ -59,7 +61,7 @@ if st.session_state.page == "home":
     with columns[2]:
         st.subheader("Oil filter")
         st.image(oil_filter_url, caption="Oil filter")
-        st.button("View more?",key="two")
+        st.button("View more?",key="two",on_click = go_filter)
             
             
             
@@ -115,7 +117,8 @@ if st.session_state.page == "home":
             
 
         
-          
+elif st.session_state.page = "filter":
+    st.title("FILTERS")
 elif st.session_state.page == "fittings":
     st.title("Fittings")
     columns = st.columns(5)
@@ -189,6 +192,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
