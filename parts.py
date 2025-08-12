@@ -15,6 +15,7 @@ def go_home():
 
 def go_contact():
     st.session_state.page = "contact"
+power = "https://m.media-amazon.com/images/I/71Cn2FAdxcL._UF350,350_QL50_.jpg"
 transmission = "https://www.duallane.com/media/catalog/product/cache/a95e9d2b539204ab79c900aa251ba8eb/f/l/fleetguard-transmission-filter-hf28943.1.jpg"
 water = "https://m.media-amazon.com/images/I/51NWojSF3tL.jpg"
 feul = "https://cdn11.bigcommerce.com/s-26lddf/images/stencil/1280x1280/products/4673/19637/P551337__81487.1735036382.jpg?c=2"
@@ -144,6 +145,11 @@ elif st.session_state.page == "filter":
         st.write("Transmission Filter")
         st.subheader("$5")
         st.number_input("How much",min_value=0,max_value=100,step=1,key="filter4")
+    with col3[4]:
+        st.image(power)
+        st.write("Power Steering Filter")
+        st.subheader("$5")
+        st.number_input("How much",min_value=0,max_value=100,step=1,key="filter5")
         
 elif st.session_state.page == "fittings":
     st.title("Fittings")
@@ -218,6 +224,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
