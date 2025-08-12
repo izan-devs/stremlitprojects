@@ -105,7 +105,7 @@ if st.session_state.page == "home":
             
             
 
-        submitted = st.form_submit_button("Submit!")
+        submitted = st.button("Submit!")
         if submitted:
             go_contact()
           
@@ -182,6 +182,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
