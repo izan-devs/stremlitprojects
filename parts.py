@@ -43,7 +43,7 @@ if st.session_state.page == "home":
         with columns[0]:
             st.subheader("Suspension")
             st.image(suspension_url, caption="Suspension")
-            st.form_submit_button("View more?,key="view_more1")
+            st.form_submit_button("View more?",key="view_more1")
             
             
             
@@ -183,6 +183,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
