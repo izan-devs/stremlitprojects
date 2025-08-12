@@ -56,8 +56,7 @@ if st.session_state.page == "home":
     with columns[1]:
         st.subheader("Truck Fittings")
         st.image(fittings_URL, caption="Fittings")
-        with bcol[1]:
-            st.button("View more", on_click = go_fittings)
+
             
             
             
@@ -224,6 +223,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
