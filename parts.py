@@ -198,6 +198,7 @@ elif st.session_state.page == "fittings":
         st.write("Hydraulic Coupling Fittings")
         st.subheader("$1")
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings7")
+    st.rerun
         
         
 
@@ -226,6 +227,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
