@@ -50,7 +50,7 @@ if st.session_state.page == "home":
     with columns[1]:
         st.subheader("Truck Fittings")
         st.image(fittings_URL, caption="Fittings")
-        st.form_submit_button("View more", on_click = go_fittings)
+        st.button("View more", on_click = go_fittings)
             
             
             
@@ -58,7 +58,7 @@ if st.session_state.page == "home":
     with columns[2]:
         st.subheader("Oil filter")
         st.image(oil_filter_url, caption="Oil filter")
-        st.form_submit_button("View more?")
+        st.button("View more?")
             
             
             
@@ -182,6 +182,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
