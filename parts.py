@@ -117,7 +117,7 @@ if st.session_state.page == "home":
             
 
         
-elif st.session_state.page = "filter":
+elif st.session_state.page == "filter":
     st.title("FILTERS")
 elif st.session_state.page == "fittings":
     st.title("Fittings")
@@ -192,6 +192,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
