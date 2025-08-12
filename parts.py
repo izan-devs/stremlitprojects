@@ -131,7 +131,7 @@ elif st.session_state.page == "filter":
         st.image(feul)
         st.write("Feul Filter")
         st.subheader("$5")
-        st.number_input("How much",min_value=0,max_value=100,step=1,key="filter1")
+        st.number_input("How much",min_value=0,max_value=100,step=1,key="filter2")
         
 elif st.session_state.page == "fittings":
     st.title("Fittings")
@@ -206,6 +206,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
