@@ -156,7 +156,7 @@ elif st.session_state.page == "filter":
         
 elif st.session_state.page == "fittings":
     st.title("Fittings")
-    columns = st.columns(5)
+    
     
     
     with columns[0]:
@@ -226,6 +226,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
