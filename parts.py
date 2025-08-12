@@ -15,6 +15,7 @@ def go_home():
 
 def go_contact():
     st.session_state.page = "contact"
+air = "https://5.imimg.com/data5/AN/PC/MY-2352124/truck-air-filter-500x500.jpg"
 hydraulic = "https://m.media-amazon.com/images/I/617QrwH+G+L.jpg"
 hardware = "https://m.media-amazon.com/images/I/81Npb2nUV7L._UF1000,1000_QL80_.jpg"
 image = "https://www.udtrucks.com/sites/default/files/styles/hero_desktop_crop/public/2024-01/Full_lineup_2024_Website%20Hero_0.jpg?itok=PgCxZ6EX"    
@@ -119,6 +120,13 @@ if st.session_state.page == "home":
         
 elif st.session_state.page == "filter":
     st.title("FILTERS")
+    col3 = st.columns(5)
+    with columns [0]:
+        st.image(air)
+        st.write("Air Filter")
+        st.subheader("$5")
+        st.number_input("How much?",min_value=0,max_value=100,step=1,key="filter1")
+        
 elif st.session_state.page == "fittings":
     st.title("Fittings")
     columns = st.columns(5)
@@ -192,6 +200,7 @@ elif st.session_state.page == "contact":
                     
                 st.success("Info submitted successfully!")
                     
+
 
 
 
