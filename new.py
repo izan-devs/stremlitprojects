@@ -230,13 +230,13 @@ elif st.session_state.page == "fittings":
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings2")
          
     with columns[2]:
-        st.image(air_coupling_fittings)
+        st.image(air_coupling_fittings,width=250)
         st.write("Air Coupling Fittings")
         st.subheader("$1")
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings3")   
          
     with columns[3]:
-        st.image(coolant_coupling_fittings)  
+        st.image(coolant_coupling_fittings,width=250)  
         st.write("Coolant Coupling Fittings   $1/Piece")
         st.subheader("$1")
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings4")
@@ -247,12 +247,12 @@ elif st.session_state.page == "fittings":
         st.subheader("$1")
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings5")
     with columns[1]:
-        st.image(hardware,width=220)
+        st.image(hardware,width=250)
         st.write("Hardware Fittings")
         st.subheader("$1")
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings6")
     with columns[2]:
-        st.image(hydraulic,width=150)
+        st.image(hydraulic,width=250)
         st.write("Hydraulic Coupling Fittings")
         st.subheader("$1")
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings7")
