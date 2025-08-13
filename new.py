@@ -21,6 +21,17 @@ def go_home():
 
 def go_contact():
     st.session_state.page = "contact"
+def go_air():
+    st.session_state.page = "air"
+burgaclip = "https://www.mastercoolparts.com/wp-content/uploads/2019/02/44-7159.jpg"    
+block_off_adaptor = "https://i5.walmartimages.com/asr/7b5344c6-3c6b-4fe2-a78d-e007d40d589e.cd06a531e88bdeec341927339cc54c5e.jpeg"    
+adaptor_port = "https://m.media-amazon.com/images/I/51pEIfnp9yL._UF894,1000_QL80_.jpg"    
+adaptor_pad_fitting = "https://m.media-amazon.com/images/I/71v-cznPZnL._UF350,350_QL80_.jpg"    
+adaptor = "https://m.media-amazon.com/images/I/61PKv-pnWZL.jpg"    
+EZ_clip = "https://cdn11.bigcommerce.com/s-xovjmui41g/images/stencil/500x659/products/2482/5330/347128__05586.1743679481.jpg?c=1"    
+standard_fitting = "https://cdn11.bigcommerce.com/s-xovjmui41g/images/stencil/1280x1280/products/934/2393/354100__27720.1728678234.jpg?c=1"    
+beadlock_fitting = "https://i.ebayimg.com/images/g/SrAAAOSwuB1gOYSE/s-l400.jpg"        
+cabin_filter = "https://m.media-amazon.com/images/I/817+4NSXe1L.jpg"    
 power = "https://m.media-amazon.com/images/I/71Cn2FAdxcL._UF350,350_QL50_.jpg"
 transmission = "https://www.duallane.com/media/catalog/product/cache/a95e9d2b539204ab79c900aa251ba8eb/f/l/fleetguard-transmission-filter-hf28943.1.jpg"
 water = "https://m.media-amazon.com/images/I/51NWojSF3tL.jpg"
@@ -139,7 +150,35 @@ if st.session_state.page == "home":
             st.button("View more",key="seven")
             
             
-            
+elif st.session_state.page == "air":
+    columns = st.columns(5)
+    with columns[0]:
+        st.image(beadlock_fitting)
+        st.write("Beadlock Reduced Fittings")
+    with columns[1]:
+        st.image(standard_fitting)
+        st.write("Beadlock Standard Fittings")
+    with columns[2]:
+        st.image(EZ_clip)
+        st.write("EZ Clip Fittings")     
+    with columns[3]:
+        st.image(adaptor)
+        st.write("Adaptor Fittings")
+    with columns[4]:
+        st.image(adaptor_pad_fitting)
+        st.write("Adaptor Pad Fittings")
+    col2 = st.columns(5)
+    with col2[0]:
+        st.image(adaptor_port)
+        st.write("Adaptor Port")
+    with col2[1]:
+        st.image(block_off_adaptor)
+        st.write("Block Off Adaptor")   
+    with col2[2]:
+        st.image(burgaclip)
+        st.write("BurgaClip Fittings")     
+                       
+
 elif st.session_state.page == "engine":
     st.title("Engine part")
     col1,col2 = st.columns([1,2])
@@ -227,6 +266,14 @@ elif st.session_state.page == "filter":
         st.write("Power Steering Filter")
         st.subheader("$5")
         st.number_input("How much",min_value=0,max_value=100,step=1,key="filter5")
+    col4=st.columns(5)
+    with col4[0]:
+        st.image(cabin_filter,caption="Air Cabin Filter")
+        st.write("Air Cabin Filter")
+        st.subheader("$5")
+        st.number_input("How much",min_value=0,max_value=100,step=1,key="filter6")
+
+
         
 elif st.session_state.page == "fittings":
     st.write("#")
@@ -237,42 +284,40 @@ elif st.session_state.page == "fittings":
     with columns[0]:
         st.image(air_condition_fittings,width=250)
         st.write("Air Conditioning Fittings")
-        st.subheader("$1")
-        st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings1")
+        st.button("View",key="fittings1",on_click =go_air)
+        
         
     with columns[1]:
         st.image(low_medium_pressure_fittings,width=250 )
         st.write("Low Medium Pressure Fittings")
-        st.subheader("$1")
-        st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings2")
+        st.button("View",key="fittings2")
+        
          
     with columns[2]:
         st.image(air_coupling_fittings,width=250)
         st.write("Air Coupling Fittings")
-        st.subheader("$1")
-        st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings3")   
+        st.button("View",key="fittings3")  
          
     with columns[3]:
         st.image(coolant_coupling_fittings,width=250)  
         st.write("Coolant Coupling Fittings   $1/Piece")
-        st.subheader("$1")
-        st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings4")
+        st.button("View",key="fittings4")
         
     with columns[0]:
         st.image(workshop_coupling_fittings,width=250)
         st.write("Workshop  Coupling  Fittings")
-        st.subheader("$1")
-        st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings5")
+        st.button("View",key="fittings5")
+        
     with columns[1]:
         st.image(hardware,width=250)
         st.write("Hardware Fittings")
-        st.subheader("$1")
-        st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings6")
+        st.button("View",key="fittings6")
+        
     with columns[2]:
         st.image(hydraulic,width=250)
         st.write("Hydraulic Coupling Fittings")
-        st.subheader("$1")
-        st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings7")
+        st.button("View",key="fittings7")
+        
         submitted = st.button("Submit!")
         if submitted:
             go_contact()
