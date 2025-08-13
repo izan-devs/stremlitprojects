@@ -224,7 +224,7 @@ elif st.session_state.page == "fittings":
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings1")
         
     with columns[1]:
-        st.image(low_medium_pressure_fittings,width=500 )
+        st.image(low_medium_pressure_fittings,width=250 )
         st.write("Low Medium Pressure Fittings")
         st.subheader("$1")
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings2")
