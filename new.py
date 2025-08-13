@@ -102,9 +102,7 @@ if st.session_state.page == "home":
         bcol = st.columns([1,3,1])
         with bcol[1]:
             st.button("View more",key="four")
-        submitted = st.button("Submit!")
-        if submitted:
-            go_contact()
+        
             
             
             
