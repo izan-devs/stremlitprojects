@@ -218,7 +218,7 @@ elif st.session_state.page == "fittings":
     
     columns = st.columns(4)
     with columns[0]:
-        st.image(air_condition_fittings,width=50)
+        st.image(air_condition_fittings,width=250)
         st.write("Air Conditioning Fittings")
         st.subheader("$1")
         st.number_input("How much",max_value=100,min_value=1,step=1,key="fittings1")
