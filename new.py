@@ -46,7 +46,7 @@ st.button("Home",on_click=go_home)
 
 if st.session_state.page == "home":
     st.image("MY LOGO.jpg",width=50)
-    st.image(image,width=550)
+    st.image(image,width=750)
     
 
     columns = st.columns(4)
