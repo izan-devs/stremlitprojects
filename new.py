@@ -4,6 +4,8 @@ st.set_page_config(layout='wide')
 if "page" not in st.session_state:
     st.session_state.page = "home"
 tabs = st.tabs(["Home"]) 
+def go_engine():
+    st.session_state.page = "engine"
 def go_batteries():
     st.session_state.page = "batteries"
 def go_suspension():
@@ -101,7 +103,7 @@ if st.session_state.page == "home":
         st.image(engine_parts_url, caption="Engine parts")
         bcol = st.columns([1,3,1])
         with bcol[1]:
-            st.button("View more",key="four")
+            st.button("View more",key="four",on_click =go_engine)
         
             
             
@@ -138,7 +140,22 @@ if st.session_state.page == "home":
             
             
             
-            
+elif st.session_state.page == "engine":
+    st.title("Engine part")
+    col1,col2 = st.columns([1,2])
+    with col1:
+        st.image(engine_parts_url)
+    with col2:
+        st.subheader("Description")
+        st.write("This engine part can be a life saver it has more power than you'd expect and this thingy is a beast"
+                 " it can also be charged so no spread of polution especially for those who have long distances work"
+                 " the price is completely affordable and shipping is free.If you want it select the number of quantity you need and "
+                 " submit youll be taken directly to the purchase page")
+        st.header("$2.50")
+        st.number_input("Amount",min_value=0,max_value=100,step=1,key="engine")  
+        submitted = st.button("Submit!")
+        if submitted:
+            go_contact()              
 elif st.session_state.page == "batteries":
     st.title("Batterie")
     col1,col2 = st.columns([1,2])
@@ -147,9 +164,9 @@ elif st.session_state.page == "batteries":
     with col2:
         st.subheader("Description")
         st.write("This batterie is super nice and it will make your truck have more life and rides will be way smoother"
-                 "after applying these batteries.It wont just charge it, it will charge your truck in seconds with immense"
-                 "power so you can get to your destination within no time.Not to mention it is totally affordable and all"
-                 "you need to do is buy it install it and let the magic do its work.")
+                 " after applying these batteries.It wont just charge it, it will charge your truck in seconds with immense"
+                 " power so you can get to your destination within no time.Not to mention it is totally affordable and all"
+                 " you need to do is buy it install it and let the magic do its work.")
         st.header("$5")  
         st.number_input("Amount",max_value=100,min_value=0,step=1,key="batterie")
         
