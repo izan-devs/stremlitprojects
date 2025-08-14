@@ -210,49 +210,79 @@ if st.session_state.page == "home":
 elif st.session_state.page == "hydraulic":
     columns = st.columns(5)
     with columns[0]:
-        st.image(ball_valve,width=250)
         st.write("Ball Valve")
+        st.image(ball_valve,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball1")
+        
     with columns[1]:
-        st.image(drain,width=250)
         st.write("Drain Cock")
+        st.image(drain,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball2")
+        
     with columns[2]:
-        st.image(field)
         st.write("Field Attachable")
+        st.image(field)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball3")
+        
     with columns[3]:
-        st.image(fitting_for_copper_tube,width=250)
         st.write("Fittings For Copper Tube")
+        st.image(fitting_for_copper_tube,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball4")
+        
     with columns[4]:
-        st.image(global_spiral,width=250)
         st.write("Global Spiral")
+        st.image(global_spiral,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball5")
+        
     col2 = st.columns(5)
     with col2[0]:
-        st.image(c14)
         st.write("Hydraulic Coupling C14")
+        st.image(c14)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball6")
+        
     with col2[1]:
-        st.image(megacrimp)
         st.write("Mega Crimp")
+        st.image(megacrimp)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball21")
+        
     with col2[2]:
-        st.image(other_hydraulic)
         st.write("Other Hydraulic Fittings And Adaptors")
+        st.image(other_hydraulic)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball7")
+        
     with col2[3]:
-        st.image(power_crimp)
         st.write("Power Crimp",width=250)
+        st.image(power_crimp)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball8")
+        
     with col2[4]:
-        st.image(quickdisconnect)
         st.write("Quick Disconnect")
+        st.image(quickdisconnect)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball9")
+        
     col3 = st.columns(4)
     with col3[0]:
-        st.image(sae)
         st.write("SAE Flare Hydraulic Adaptor")
+        st.image(sae)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball10")
+        
     with col3[1]:
-        st.image(high)
         st.write("SAE To SAE - High Pressure Fittings") 
+        st.image(high)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball11")
+        
     with col3[2]:
-        st.image(seal)
         st.write("Seal Kits And Seals")
+        st.image(seal)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball12")
+        
     with col3[3]:
+        st.write("Hydraulic Hose Tools And Accessories")  
         st.image(annoying)
-        st.write("Hydraulic Hose Tools And Accessories")           
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ball13")
+        submitted = st.button("Submit!")
+        if submitted:
+            go_contact()         
 
 
 
@@ -262,14 +292,23 @@ elif st.session_state.page == "hydraulic":
 elif st.session_state.page == "hardware":
     columns = st.columns(3)
     with columns[0]:
-        st.image(bundle_clamps,width=300)
         st.write("Bundle Clamps")
+        st.image(bundle_clamps,width=300)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="bundle1")
+        
     with columns[1]:
-        st.image(metal,width=250)
         st.write("Metal caps and plugs")
+        st.image(metal,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="bundle2")
+        
     with columns[2]:
-        st.image(tap,width=250)
         st.write("Teflon Tape And Liquid")
+        st.image(tap,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="bundle3")
+        submitted = st.button("Submit!")
+        if submitted:
+            go_contact()
+        
                             
 
 
@@ -277,33 +316,54 @@ elif st.session_state.page == "hardware":
 elif st.session_state.page == "workshop":
     columns = st.columns(5)
     with columns[0]:
+        st.write("Air Hose Coupler")
         st.image(air_hose)
-        st.write("Air Hose Coupler")     
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="acrw")
+             
     with columns[1]:
-        st.image(brass)
         st.write("Brass Fitting")
+        st.image(brass)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="acrw1")
+        
+        
     with columns[2]:
-        st.image(compression_brass)
         st.write("Compression Brass (Push Type Fittings)")
+        st.image(compression_brass)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="acrw2")
+        
     with columns[3]:
-        st.image(grease)
         st.write("Grease Fitting")
+        st.image(grease)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="acrw3")
+        
     with columns[4]:
-        st.image(hose_coupler_adapter,width=250)
         st.write("Hose Coupler Adapter ")
+        st.image(hose_coupler_adapter,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="acrw4")
+        
     col2 = st.columns(4)
     with col2[0]:
-        st.image(modular,width=250)
         st.write("Modular Air line")
+        st.image(modular,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="acrw5")
+        
     with col2[1]:
-        st.image(push_type,width=250)
         st.write("Push Type Fittings")
+        st.image(push_type,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="acrw6")
+        
     with col2[2]:
-        st.image(push_type_nylon,width=250)
         st.write("Push Type Nylon Fittings")
+        st.image(push_type_nylon,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="acrw7")
+        
     with col2[3]:
+        st.write("Tool Adaptor Fitting")
         st.image(tool_adaptor,width=250)
-        st.write("Tool Adaptor Fitting")                                       
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="acrw8")
+        submitted = st.button("Submit!")
+        if submitted:
+            go_contact()                                       
 
 
 
@@ -328,7 +388,9 @@ elif st.session_state.page == "coolant":
         st.write("Quick Lock Connector")
         st.image(quick,width=250)
         st.number_input("Amount",max_value=100,min_value=0,key="way4",step=1)
-                
+        submitted = st.button("Submit!")
+        if submitted:
+            go_contact()        
 
 
 
@@ -375,7 +437,9 @@ elif st.session_state.page == "coupling":
         st.write("Other Air Couplings And Fittings")
         st.image(other,width=250)
         st.number_input("Amount",max_value=100,min_value=0,step=1,key="oacaf")
-                                  
+        submitted = st.button("Submit!")
+        if submitted:
+            go_contact()                          
 
 
 
@@ -423,7 +487,9 @@ elif st.session_state.page == "low_medium":
         st.write("Vaccum Connector")
         st.image(vaccum_connector)
         st.number_input("Amount",max_value=100,min_value=0,step=1,key="ID5")
-                               
+        submitted = st.button("Submit!")
+        if submitted:
+            go_contact()                       
 
 
 
@@ -514,7 +580,9 @@ elif st.session_state.page == "air":
         st.write("PolarSeal")
         st.image(polar)
         st.number_input("Amount",key="seal",max_value=100,min_value=0,step=1)
-        
+        submitted = st.button("Submit!")
+        if submitted:
+            go_contact()
         
                
 
@@ -527,10 +595,13 @@ elif st.session_state.page == "engine":
         st.image(engine_parts_url)
     with col2:
         st.subheader("Description")
-        st.write("This engine part can be a life saver it has more power than you'd expect and this thingy is a beast"
-                 " it can also be charged so no spread of polution especially for those who have long distances work"
-                 " the price is completely affordable and shipping is free.If you want it select the number of quantity you need and "
-                 " submit youll be taken directly to the purchase page")
+        st.write("This engine component represents a transformative enhancement, delivering a level of power that exceeds "
+         "expectations, truly rendering it a formidable asset. Remarkably, it operates with minimal environmental "
+         "impact, allowing for recharging and thereby reducing emissions—a boon for those traversing extensive distances. "
+         "The cost is exceptionally reasonable, and shipping is provided at no additional charge. To acquire this "
+         "superior component, simply select the desired quantity and proceed; you will be seamlessly directed to the "
+         "purchase page, ready to secure its benefits.")
+
         st.header("$2.50")
         st.number_input("Amount",min_value=0,max_value=100,step=1,key="engine")  
         submitted = st.button("Submit!")
@@ -548,10 +619,13 @@ elif st.session_state.page == "batteries":
         st.image(batteries_url)
     with col2:
         st.subheader("Description")
-        st.write("This batterie is super nice and it will make your truck have more life and rides will be way smoother"
-                 " after applying these batteries.It wont just charge it, it will charge your truck in seconds with immense"
-                 " power so you can get to your destination within no time.Not to mention it is totally affordable and all"
-                 " you need to do is buy it install it and let the magic do its work.")
+        st.write("This battery is a remarkable innovation, designed to imbue your truck with renewed vitality and ensure "
+         "each journey unfolds with refined smoothness. Upon installation, it does far more than merely replenish "
+         "energy—it delivers an extraordinary surge of power, restoring your vehicle to readiness within moments. "
+         "Such immediacy allows you to reach your destination with admirable efficiency. Remarkably, this advancement "
+         "remains entirely accessible in cost, requiring only purchase, installation, and the quiet certainty that "
+         "its performance will speak for itself.")
+
         st.header("$5")  
         st.number_input("Amount",max_value=100,min_value=0,step=1,key="batterie")
         
@@ -573,11 +647,14 @@ elif st.session_state.page == "suspension":
 
     with col2:
         st.subheader("Description")
-        st.write("This suspension is super cool and will make your vehicle ride way smoother! It helps absorb bumps "
-        "and shocks so your car doesnt bounce all over the place. It also makes turning and handling way "
-        "easier, so you feel in control even on bumpy roads. I picked strong materials so it lasts a long time, "
-        "and its perfect for people who want their car to look and feel awesome. Installing it is pretty simple, "
-        "and it works for all kinds of rides. Trust me, once you try it, youll notice a huge difference!")
+        st.write("This suspension system is an exceptional enhancement, engineered to endow your vehicle with an exquisitely "
+         "smooth and composed ride. It deftly mitigates the intrusion of bumps and imperfections, ensuring the car "
+         "glides with poise rather than succumbing to unruly motion. Cornering becomes a refined exercise in control, "
+         "allowing one to navigate even the most uneven terrain with confidence. Constructed from resilient, "
+         "high-quality materials, it promises enduring performance and a graceful longevity. Installation is "
+         "straightforward, accommodating an array of vehicles. Once experienced, its transformative effect becomes "
+         "undeniably apparent.")
+
             
         st.header("$10")
         st.number_input("Amount", key="suspension", min_value=0, max_value=100, step=1)
@@ -670,9 +747,7 @@ elif st.session_state.page == "fittings":
         st.write("Hydraulic Coupling Fittings")
         st.button("View",key="fittings7",on_click=go_hydraulic)
         
-        submitted = st.button("Submit!")
-        if submitted:
-            go_contact()
+        
 
         
         
