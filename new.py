@@ -3,7 +3,17 @@ import streamlit as st
 st.set_page_config(layout='wide')
 if "page" not in st.session_state:
     st.session_state.page = "home"
-tabs = st.tabs(["Home"]) 
+tabs = st.tabs(["Home"])
+def go_hydraulic():
+    st.session_state.page = "hydraulic"
+def go_hardware():
+    st.session_state.page = "hardware" 
+def go_coolant_fittings():
+    st.session_state.page = "coolant"
+def go_coupling_fittings():
+    st.session_state.page = "coupling"
+def go_low_medium():
+    st.session_state.page = "low_medium"
 def go_engine():
     st.session_state.page = "engine"
 def go_batteries():
@@ -23,9 +33,57 @@ def go_contact():
     st.session_state.page = "contact"
 def go_air():
     st.session_state.page = "air"
+def go_workshop():
+    st.session_state.page = "workshop"
+annoying = "https://image.vevor.com/us%2F71500YYRGJSJ00001V0%2Fgoods_img-v8%2Fac-hose-crimper-m100-1.2.jpg?timestamp=1644483306000"    
+seal = "https://cdn.greenlinehose.com/images/full/pulsar/8.Accessories/HKIT-SCP-BSEAL.jpg"    
+high = "https://www.swagelok.com/assets/images/product_images/large/SS-4-SAE-7-4.jpg?impolicy=product"    
+sae = "https://m.media-amazon.com/images/I/51vFHMUFHaL._UF1000,1000_QL80_.jpg"    
+quickdisconnect = "https://www.industrialspec.com/shop/media/catalog/category/40cb_series.jpg_1.png"    
+power_crimp = "https://cdn.greenlinehose.com/images/full/pulsar/2.Crimp/4200.jpg"    
+other_hydraulic = "https://www.powerdrives.com/wp-content/uploads/2019/11/Dixon-pneumatic-quick-disconnects.png"    
+megacrimp = "https://www.southcott.com.au/images/thumbs/0001945_megacrimp-straight-male-npt-swivel_360.jpeg"   
+c14 = "https://gates.scene7.com/is/image/gates/c14-sta-b-g40461-1-ang-r?id=KPYqi0&fmt=jpg&dpr=off&fit=constrain,1&wid=352&hei=276"    
+global_spiral = "https://s.alicdn.com/@sc04/kf/H3ea18f9d365640a0877deffd5581b9b4v.jpg"    
+fitting_for_copper_tube = "https://m.media-amazon.com/images/I/81+-d8t4UxL.jpg"    
+field = "https://www.parker.com/content/dam/Parker-com/Online/Product-Images/Hose-Products-Division/zoom_1000x1000/30182_1000x1000.jpg"    
+drain = "https://cdn.rona.ca/images/73455174_L.jpg"    
+ball_valve = "https://m.media-amazon.com/images/I/81UIHhRxHVL.jpg"
+tap = "https://m.media-amazon.com/images/I/61dQu9RYShL.jpg"  
+metal = "https://www.swagelok.com/assets/images/product_images/large/SS-8-VCR-P.jpg?impolicy=superZoom"    
+bundle_clamps = "https://media.napacanada.com/is/image/GenuinePartsCompany/3046690?fmt=jpg&qlt=70"    
+tool_adaptor = "https://m.media-amazon.com/images/I/51TgXTg42mL._UF894,1000_QL80_.jpg"    
+push_type_nylon = "https://usp.imgix.net/catalog/images/products/100/400/25145p.jpg?w=152&dpr=2&fit=max&auto=compress,format"    
+push_type = "https://www.thepneumaticstore.com/images/tnImages/fittings/tn_PE.jpg"    
+modular = "https://cdn11.bigcommerce.com/s-1qmaqa25jp/images/stencil/500x659/products/21414/85693/70863_1__36496.1744616881.jpg?c=1"    
+hose_coupler_adapter = "https://www.swagelok.com/assets/images/product_images/large/B-6-HC-1-8.jpg?impolicy=product"    
+grease = "https://www.grmflow.com/wp-content/uploads/2019/07/PlugValve-300px-1.jpg"    
+compression_brass = "https://www.multipipe.co.uk/wp-content/uploads/2024/10/166230-16-x-15-Cu-Straight-Copper-Compression.jpg"    
+brass = "https://www.ontariobeerkegs.com/assets/images/brass-barb-3-8-1-2-f-2.jpg"    
+air_hose = "https://www.parker.com/content/dam/Parker-com/Online/Product-Images/Quick-Coupling-Division/zoom_1000x1000/70Series_zm.jpg"    
+quick = "https://i5.walmartimages.com/asr/4a8ea0fe-62bc-470e-b463-50a97e137a23.4919003abb0cbab8c74dbac9e966d421.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"    
+three_way_connector = "https://s.alicdn.com/@sc04/kf/Hc6216fa757b64817b499e5ee7311e75bO.jpg"    
+two_way_connector = "https://kent.ca/media/catalog/product/cache/ae515196f1ace26aad3b1b066626b4f5/1/0/1027872_3.jpg"    
+other = "https://m.media-amazon.com/images/I/71dfnkZdkiL.jpg"    
+compression_fittings = "https://m.media-amazon.com/images/I/7100sT3bxEL._UF1000,1000_QL80_.jpg"    
+bolt = "https://pim.wurth.ca/Product/8841495B-D.jpg"    
+hose = "https://cdn.greenlinehose.com/images/large/fittings/8.Truck/G4316G.jpg"    
+nylon_tube = "https://m.media-amazon.com/images/I/51pRjaXBHkL.jpg"    
+fields_kit = "https://southernindustrial.store/wp-content/uploads/2022/12/ABFR-KIT-1-PC-1-300x240.jpg"    
+air_brake = "https://southernindustrial.store/wp-content/uploads/2022/12/PC1462-10-A2d-300x240.jpg"    
+coupling_fitting = "https://southernindustrial.store/wp-content/uploads/2022/12/PC1468-4A-A2b-300x240.jpg"    
+vaccum_connector = "https://www.agscompany.com/cdn/shop/products/PRF-35B_823x.jpg?v=1660842351"    
+push_on = "https://mobileimages.lowes.com/productimages/ce424fab-5dee-44ed-8fa1-3474c2aef646/48423962.jpg?size=pdhism"    
+low_pressure = "https://www.tenaquip.com/images/large/y/ya558_lr.jpg?1556578809"    
+polar = "https://m.media-amazon.com/images/I/61i8WOa5kcL.jpg"   
+ac = "https://m.media-amazon.com/images/I/71ObvlbsF+L.jpg"    
+manuli_fittings = "https://www.camthorne.co.uk/wp-content/uploads/2022/03/manuli-bsp-straight-male-fittings.jpg"    
+crimper_tool = "https://www.zoro.com/static/cms/product/full/Z-pM6tlcpEx_.JPG"    
+compresser_manifold = "https://products.atcoproductsinc.com/Asset/a1033.jpg"    
+components_accessories = "https://www.componenthardware.com/images/thumbs/0000260_cross-brace-fittings_370.jpeg"    
 burgaclip = "https://www.mastercoolparts.com/wp-content/uploads/2019/02/44-7159.jpg"    
 block_off_adaptor = "https://i5.walmartimages.com/asr/7b5344c6-3c6b-4fe2-a78d-e007d40d589e.cd06a531e88bdeec341927339cc54c5e.jpeg"    
-adaptor_port = "https://m.media-amazon.com/images/I/51pEIfnp9yL._UF894,1000_QL80_.jpg"    
+adaptor_port = "https://www.parker.com/content/dam/Parker-com/Online/Product-Images/Fluid-System-Connectors-Division/zoom_1000x1000/ISO_222P_X_MIX_zm.jpg"    
 adaptor_pad_fitting = "https://m.media-amazon.com/images/I/71v-cznPZnL._UF350,350_QL80_.jpg"    
 adaptor = "https://m.media-amazon.com/images/I/61PKv-pnWZL.jpg"    
 EZ_clip = "https://cdn11.bigcommerce.com/s-xovjmui41g/images/stencil/500x659/products/2482/5330/347128__05586.1743679481.jpg?c=1"    
@@ -148,35 +206,318 @@ if st.session_state.page == "home":
         bcol = st.columns([1,3,1])
         with bcol[1]:
             st.button("View more",key="seven")
+
+elif st.session_state.page == "hydraulic":
+    columns = st.columns(5)
+    with columns[0]:
+        st.image(ball_valve,width=250)
+        st.write("Ball Valve")
+    with columns[1]:
+        st.image(drain,width=250)
+        st.write("Drain Cock")
+    with columns[2]:
+        st.image(field)
+        st.write("Field Attachable")
+    with columns[3]:
+        st.image(fitting_for_copper_tube,width=250)
+        st.write("Fittings For Copper Tube")
+    with columns[4]:
+        st.image(global_spiral,width=250)
+        st.write("Global Spiral")
+    col2 = st.columns(5)
+    with col2[0]:
+        st.image(c14)
+        st.write("Hydraulic Coupling C14")
+    with col2[1]:
+        st.image(megacrimp)
+        st.write("Mega Crimp")
+    with col2[2]:
+        st.image(other_hydraulic)
+        st.write("Other Hydraulic Fittings And Adaptors")
+    with col2[3]:
+        st.image(power_crimp)
+        st.write("Power Crimp",width=250)
+    with col2[4]:
+        st.image(quickdisconnect)
+        st.write("Quick Disconnect")
+    col3 = st.columns(4)
+    with col3[0]:
+        st.image(sae)
+        st.write("SAE Flare Hydraulic Adaptor")
+    with col3[1]:
+        st.image(high)
+        st.write("SAE To SAE - High Pressure Fittings") 
+    with col3[2]:
+        st.image(seal)
+        st.write("Seal Kits And Seals")
+    with col3[3]:
+        st.image(annoying)
+        st.write("Hydraulic Hose Tools And Accessories")           
+
+
+
+                                    
+
+
+elif st.session_state.page == "hardware":
+    columns = st.columns(3)
+    with columns[0]:
+        st.image(bundle_clamps,width=300)
+        st.write("Bundle Clamps")
+    with columns[1]:
+        st.image(metal,width=250)
+        st.write("Metal caps and plugs")
+    with columns[2]:
+        st.image(tap,width=250)
+        st.write("Teflon Tape And Liquid")
+                            
+
+
+
+elif st.session_state.page == "workshop":
+    columns = st.columns(5)
+    with columns[0]:
+        st.image(air_hose)
+        st.write("Air Hose Coupler")     
+    with columns[1]:
+        st.image(brass)
+        st.write("Brass Fitting")
+    with columns[2]:
+        st.image(compression_brass)
+        st.write("Compression Brass (Push Type Fittings)")
+    with columns[3]:
+        st.image(grease)
+        st.write("Grease Fitting")
+    with columns[4]:
+        st.image(hose_coupler_adapter,width=250)
+        st.write("Hose Coupler Adapter ")
+    col2 = st.columns(4)
+    with col2[0]:
+        st.image(modular,width=250)
+        st.write("Modular Air line")
+    with col2[1]:
+        st.image(push_type,width=250)
+        st.write("Push Type Fittings")
+    with col2[2]:
+        st.image(push_type_nylon,width=250)
+        st.write("Push Type Nylon Fittings")
+    with col2[3]:
+        st.image(tool_adaptor,width=250)
+        st.write("Tool Adaptor Fitting")                                       
+
+
+
+
+
+
+
+
+elif st.session_state.page == "coolant":
+    columns = st.columns(3)
+    with columns[0]:
+        st.write("2 Way Connector")
+        st.image(two_way_connector,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,key="way2",step=1)
+        
+    with columns[1]:
+        st.write("Three Way Connector")
+        st.image(three_way_connector,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,key="way3",step=1)
+        
+    with columns[2]:
+        st.write("Quick Lock Connector")
+        st.image(quick,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,key="way4",step=1)
+                
+
+
+
+elif st.session_state.page == "coupling":
+    columns = st.columns(4)
+    with columns[0]:
+        st.write("Air Brake Fitting For Copper Tube")
+        st.image(coupling_fitting)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="air")
+        
+    with columns[1]:
+        st.write("Air Brake Fittings (Push To Connect)")  
+        st.image(air_brake)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="fit")
+        
+        
+    with columns[2]:
+        st.write("Air Brake Fittings - Fields Kit")
+        st.image(fields_kit)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="kit")
+           
+    with columns[3]:
+        st.write("Air Brake Fitting For Nylon Tube")
+        st.image(nylon_tube,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="nylon")
+          
+    col2 = st.columns(4)
+    with col2[0]:
+        st.write("Air Brake Hose Couplings")
+        st.image(hose,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="hose")
+         
+    with col2[1]:
+        st.write("Air Brake Terminal Bolt")
+        st.image(bolt,width=285)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="bolt")
+          
+    with col2[2]:
+        st.write("Compression Fittings")
+        st.image(compression_fittings,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="cf")
             
+    with col2[3]:
+        st.write("Other Air Couplings And Fittings")
+        st.image(other,width=250)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="oacaf")
+                                  
+
+
+
+
+
+elif st.session_state.page == "low_medium":
+    columns = st.columns(4)
+    with columns[0]:
+        st.write("Other Low Pressure Fittings")
+        st.image(low_pressure)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="low")
+           
+    with columns[1]:
+        st.write("Push On 1/2 in ID")
+        st.image(push_on)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="push")
+             
+    with columns[2]:
+        st.write("Push On 1/4 in ID")
+        st.image(push_on)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="on")
+        
+    with columns[3]:
+        st.write("Push On 3/4 in ID")
+        st.image(push_on)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ID")
+             
+    col2 = st.columns(4)
+    with columns[0]:
+        st.write("Push On 3/8 in ID")
+        st.image(push_on)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ID2")
+        
+    with columns[1]:
+        st.write("Push On 5/16 in ID")
+        st.image(push_on)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ID3")
+        
+    with columns[2]:
+        st.write("Push On 5/8 in ID")
+        st.image(push_on)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ID4")
             
+    with columns[3]:
+        st.write("Vaccum Connector")
+        st.image(vaccum_connector)
+        st.number_input("Amount",max_value=100,min_value=0,step=1,key="ID5")
+                               
+
+
+
+
+
 elif st.session_state.page == "air":
     columns = st.columns(5)
     with columns[0]:
-        st.image(beadlock_fitting)
         st.write("Beadlock Reduced Fittings")
+        st.image(beadlock_fitting)
+        st.number_input("Amount",key="dead",max_value=100,min_value=0,step=1)
+        
+        
     with columns[1]:
-        st.image(standard_fitting)
         st.write("Beadlock Standard Fittings")
+        st.image(standard_fitting)
+        st.number_input("Amount",key="standart",max_value=100,min_value=0,step=1)
+        
+        
     with columns[2]:
+        st.write("EZ Clip Fittings")
         st.image(EZ_clip)
-        st.write("EZ Clip Fittings")     
+        st.number_input("Amount",key="ez",max_value=100,min_value=0,step=1)
+        
+             
     with columns[3]:
-        st.image(adaptor)
         st.write("Adaptor Fittings")
+        st.image(adaptor)
+        st.number_input("Amount",key="adaptor",max_value=100,min_value=0,step=1)
+        
     with columns[4]:
-        st.image(adaptor_pad_fitting)
         st.write("Adaptor Pad Fittings")
+        st.image(adaptor_pad_fitting)
+        st.number_input("Amount",key="pad",max_value=100,min_value=0,step=1)
+        
+       
     col2 = st.columns(5)
     with col2[0]:
-        st.image(adaptor_port)
         st.write("Adaptor Port")
+        st.image(adaptor_port)
+        st.number_input("Amount",key="port",max_value=100,min_value=0,step=1)
+        
+        
     with col2[1]:
+        st.write("Block Off Adaptor")
         st.image(block_off_adaptor)
-        st.write("Block Off Adaptor")   
+        st.number_input("Amount",key="block",max_value=100,min_value=0,step=1)
+        
+          
     with col2[2]:
+        st.write("BurgaClip Fittings")
         st.image(burgaclip)
-        st.write("BurgaClip Fittings")     
+        st.number_input("Amount",key="burga",max_value=100,min_value=0,step=1)
+        
+          
+    with col2[3]:
+        st.write("Components And Accessories")
+        st.image(components_accessories)
+        st.number_input("Amount",key="comp",max_value=100,min_value=0,step=1)  
+        
+        
+    with col2[4]:
+        st.write("Compressor Manifold")
+        st.image(compresser_manifold)
+        st.number_input("Amount",key="compressoor",max_value=100,min_value=0,step=1)
+        
+          
+    col3 = st.columns(4)
+    with col3[0]:
+        st.write("Crimper Tool")
+        st.image(crimper_tool)
+        st.number_input("Amount",key="crimper",max_value=100,min_value=0,step=1)
+        
+        
+    with col3[1]:
+        st.write("Manuli Fittings")
+        st.image(manuli_fittings)
+        st.number_input("Amount",key="manuli",max_value=100,min_value=0,step=1)
+        
+        
+    with col3[2]:
+        st.write("Other A/C Fittings")
+        st.image(ac)
+        st.number_input("Amount",key="ac",max_value=100,min_value=0,step=1)
+        
+         
+    with col3[3]:
+        st.write("PolarSeal")
+        st.image(polar)
+        st.number_input("Amount",key="seal",max_value=100,min_value=0,step=1)
+        
+        
+               
+
                        
 
 elif st.session_state.page == "engine":
@@ -195,6 +536,11 @@ elif st.session_state.page == "engine":
         submitted = st.button("Submit!")
         if submitted:
             go_contact()              
+
+
+
+
+
 elif st.session_state.page == "batteries":
     st.title("Batterie")
     col1,col2 = st.columns([1,2])
@@ -212,6 +558,10 @@ elif st.session_state.page == "batteries":
         submitted = st.button("Submit!")
         if submitted:
             go_contact()
+
+
+
+
 
 elif st.session_state.page == "suspension":
     st.title("Suspension")
@@ -238,6 +588,8 @@ elif st.session_state.page == "suspension":
             go_contact()
 
     
+
+
 elif st.session_state.page == "filter":
     st.title("FILTERS")
     col3 = st.columns(5)
@@ -290,33 +642,33 @@ elif st.session_state.page == "fittings":
     with columns[1]:
         st.image(low_medium_pressure_fittings,width=250 )
         st.write("Low Medium Pressure Fittings")
-        st.button("View",key="fittings2")
+        st.button("View",key="fittings2",on_click=go_low_medium)
         
          
     with columns[2]:
         st.image(air_coupling_fittings,width=250)
         st.write("Air Coupling Fittings")
-        st.button("View",key="fittings3")  
+        st.button("View",key="fittings3",on_click=go_coupling_fittings)  
          
     with columns[3]:
         st.image(coolant_coupling_fittings,width=250)  
         st.write("Coolant Coupling Fittings   $1/Piece")
-        st.button("View",key="fittings4")
+        st.button("View",key="fittings4",on_click=go_coolant_fittings)
         
     with columns[0]:
         st.image(workshop_coupling_fittings,width=250)
         st.write("Workshop  Coupling  Fittings")
-        st.button("View",key="fittings5")
+        st.button("View",key="fittings5",on_click=go_workshop)
         
     with columns[1]:
         st.image(hardware,width=250)
         st.write("Hardware Fittings")
-        st.button("View",key="fittings6")
+        st.button("View",key="fittings6",on_click=go_hardware)
         
     with columns[2]:
         st.image(hydraulic,width=250)
         st.write("Hydraulic Coupling Fittings")
-        st.button("View",key="fittings7")
+        st.button("View",key="fittings7",on_click=go_hydraulic)
         
         submitted = st.button("Submit!")
         if submitted:
