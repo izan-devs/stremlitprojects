@@ -116,7 +116,7 @@ oil_filter_url = "https://thumbs.dreamstime.com/b/oil-filters-20508237.jpg"
 st.button("Home",on_click=go_home)
 
 if st.session_state.page == "home":
-    st.image("MY LOGO.jpg")
+    st.image("MY LOGO2.jpg")
     
     st.image(image,width=1250)
     
