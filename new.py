@@ -1,3 +1,4 @@
+from PIL import Image
 import streamlit as st
 
 st.set_page_config(layout='wide')
@@ -116,9 +117,16 @@ oil_filter_url = "https://thumbs.dreamstime.com/b/oil-filters-20508237.jpg"
 st.button("Home",on_click=go_home)
 
 if st.session_state.page == "home":
-    st.image("MY LOGO.jpg",width=150)
+    columns= st.columns([1,3,1])
+    with columns[1]:
+
+        st.image("MY LOGO2.jpg",width=1000)
     st.image(image,width=1250)
-    
+    columns = st.columns(3)
+    with columns[1]:
+        img = Image.open("browse.jpg")
+        img = img.resize((650,200))
+        st.image(img)
 
     columns = st.columns(4)
     with columns[0]:
